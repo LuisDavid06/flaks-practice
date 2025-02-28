@@ -1,0 +1,15 @@
+{% extends 'base.html'%} {% block title%} Pagina de Hola {%endblock%} {%block
+content%} {% if data.name is none and data.age is none and data.email is none %}
+<h1>Hello world</h1>
+{% elif data.age is none and data.email is none %}
+<h1>Hello {{data.name}}</h1>
+{%elif data.email is none %}
+<h1>hola {{data.name}}, tu edad {{data.age}}!!</h1>
+{%else%}
+
+<ul>
+  <li>Nombre: {{data.name}}</li>
+  <li>Edad: {{data.age}}</li>
+  <li>Email: {{data.email}}</li>
+</ul>
+{%endif%} {%endblock%}
